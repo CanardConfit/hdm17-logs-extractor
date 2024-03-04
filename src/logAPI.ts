@@ -1,19 +1,16 @@
 import * as fs from "fs";
 import * as iconv from "iconv-lite";
-import { EventEmitter } from "node:events";
 import * as readline from "readline";
+import { EventEmitter } from "node:events";
 import { logLib } from "./logLib";
-import { LogInfo } from "./loginfo";
+import { LogInfo } from "./logInfo";
+import { FSWatcher } from "node:fs";
 
 export class LogWatch extends EventEmitter {
-    private _logInfoList: LogInfo[];
+    private _logInfoList: LogInfo[] = [];
     private _readlineInterface: readline.Interface;
-
-    constructor(readlineInterface: readline.Interface) {
-        super();
-        this._logInfoList = [];
-        this._readlineInterface = readlineInterface;
-    }
+    private _fileStream: NodeJS.ReadWriteStream;
+    private _watcher: FSWatcher;
 
     get logInfoList() {
         return this._logInfoList;
@@ -21,6 +18,26 @@ export class LogWatch extends EventEmitter {
 
     get readlineInterface() {
         return this._readlineInterface;
+    }
+
+    set readlineInterface(value: readline.Interface) {
+        this._readlineInterface = value;
+    }
+
+    get fileStream(): NodeJS.ReadWriteStream {
+        return this._fileStream;
+    }
+
+    set fileStream(value: NodeJS.ReadWriteStream) {
+        this._fileStream = value;
+    }
+
+    get watcher(): FSWatcher {
+        return this._watcher;
+    }
+
+    set watcher(value: FSWatcher) {
+        this._watcher = value;
     }
 }
 
@@ -41,6 +58,8 @@ const watchFile = (logPath: string, logWatch: LogWatch) => {
 
     const watcher = fs.watch(logPath, { encoding: "buffer" });
 
+    logWatch.watcher = watcher;
+
     watcher.on("change", () => {
         fs.readFile(logPath, (err, data) => {
             if (err) throw err;
@@ -52,7 +71,6 @@ const watchFile = (logPath: string, logWatch: LogWatch) => {
             newData.split("\n").forEach((line) => {
                 const logInfo = getLog(logWatch, line);
                 if (logInfo) {
-                    logWatch.emit("line", logInfo);
                     logWatch.emit("lineChanged", logInfo);
                     logWatch.logInfoList.push(logInfo);
                 }
@@ -61,15 +79,29 @@ const watchFile = (logPath: string, logWatch: LogWatch) => {
     });
 };
 
+const stopLogWatch = (logWatch: LogWatch) => {
+    logWatch.readlineInterface.close();
+    logWatch.fileStream.end();
+    logWatch.watcher.close();
+};
+
 const initLogWatch = (logPath: string, firstScan: boolean = true): LogWatch => {
+    const logWatch = new LogWatch();
+
+    if (!fs.existsSync(logPath)) {
+        logWatch.emit("error", new Error("File path must be filled and exist"));
+    }
+
     const fileStream = fs.createReadStream(logPath).pipe(iconv.decodeStream("windows-1252"));
+
+    logWatch.fileStream = fileStream;
 
     const rl = readline.createInterface({
         input: fileStream,
         crlfDelay: Infinity,
     });
 
-    const logWatch = new LogWatch(rl);
+    logWatch.readlineInterface = rl;
 
     if (firstScan) {
         console.log("First scan...");
@@ -77,14 +109,14 @@ const initLogWatch = (logPath: string, firstScan: boolean = true): LogWatch => {
         rl.on("line", (line) => {
             const logInfo = getLog(logWatch, line);
             if (logInfo) {
-                logWatch.emit("line", logInfo);
+                logWatch.emit("firstScan", logInfo);
                 logWatch.logInfoList.push(logInfo);
             }
         });
 
         rl.on("close", () => {
             console.log("First scan finished.");
-
+            logWatch.emit("firstScanFinished");
             watchFile(logPath, logWatch);
         });
     } else {
@@ -96,6 +128,7 @@ const initLogWatch = (logPath: string, firstScan: boolean = true): LogWatch => {
 
 export const logAPI = {
     initLogWatch,
+    stopLogWatch,
     getLog: logLib.getLog,
     resetJobName: logLib.resetJobName,
 };

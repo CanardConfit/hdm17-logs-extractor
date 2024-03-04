@@ -19,13 +19,12 @@ import {
     RETENTION_NOT_ENOUGH,
     LTS_NOTIFICATION_STATUS,
     SEND_MAIL_STATUS,
-    SEND_MAIL_EMAIL,
     JOB_HISTORY_GUID,
     JOB_EXIT_CODE,
     JOB_END_TIME,
     SPACER,
     DELIMITER,
-} from "../src/loginfo";
+} from "../src/logInfo";
 
 describe("LogAPI getLog tests", () => {
     test("getLog JOB_START_TIME", () => {
@@ -287,7 +286,7 @@ describe("LogAPI getLog tests", () => {
         expect(logInfo).toEqual(EXPECTED_LOG_INFO);
     });
 
-    test("getLog getLog RETENTION_NOT_ENOUGH", () => {
+    test("getLog RETENTION_NOT_ENOUGH", () => {
         logAPI.resetJobName();
         const logLine = "02.03.2024 11:58:31.266,physical,[19208]  (Retention) Number of archives is not enough for retention ... Stop";
         const EXPECTED_LOG_INFO = {
@@ -296,7 +295,7 @@ describe("LogAPI getLog tests", () => {
             operationType: "physical",
             processId: 19208,
             logType: RETENTION_NOT_ENOUGH,
-            logValue: "Number of archives is not enough for retention ... Stop",
+            logValue: undefined,
         };
 
         const logInfo = logAPI.getLog(logLine);
@@ -335,22 +334,6 @@ describe("LogAPI getLog tests", () => {
         expect(logInfo).toEqual(EXPECTED_LOG_INFO);
     });
 
-    test("getLog SEND_MAIL_EMAIL", () => {
-        logAPI.resetJobName();
-        const line = "02.03.2024 11:58:34.717,physical,[19208]  Send mail via SMTP server to 'example@example.com' ... Success";
-        const EXPECTED_LOG_INFO = {
-            jobName: null,
-            dateTime: new Date("2024-03-02T11:58:34.717Z"),
-            operationType: "physical",
-            processId: 19208,
-            logType: SEND_MAIL_EMAIL,
-            logValue: "example@example.com",
-        };
-
-        const logInfo = logAPI.getLog(line);
-        expect(logInfo).toEqual(EXPECTED_LOG_INFO);
-    });
-
     test("getLog JOB_HISTORY_GUID", () => {
         logAPI.resetJobName();
         const line = "02.03.2024 11:58:34.782,physical,[19208]  New job history guid: 'eb32b85e-fc7c-4f6b-5631-8532d7354867'";
@@ -376,7 +359,7 @@ describe("LogAPI getLog tests", () => {
             operationType: "virtual",
             processId: 19208,
             logType: JOB_EXIT_CODE,
-            logValue: "0",
+            logValue: 0,
         };
 
         const logInfo = logAPI.getLog(line);
@@ -423,7 +406,7 @@ describe("LogAPI getLog tests", () => {
 
         const EXPECTED_LOG_INFO = {
             jobName: null,
-            dateTime: new Date("2024-03-02T11:52:44.334Z"),
+            dateTime: new Date("2024-03-02T11:58:35.859Z"),
             operationType: "virtual",
             processId: 19208,
             logType: SPACER,

@@ -262,15 +262,6 @@ export const SEND_MAIL_STATUS: LogType = {
 };
 
 /**
- * Extracts the email address to which mail was sent.
- */
-export const SEND_MAIL_EMAIL: LogType = {
-    logTypeName: "SEND_MAIL_EMAIL",
-    logRegex: /Send mail via SMTP server to '([^']+)'/,
-    dataType: DataType.String,
-};
-
-/**
  * Parses the new job history GUID from the log entry.
  */
 export const JOB_HISTORY_GUID: LogType = {
@@ -345,7 +336,6 @@ export const logTypes: LogType[] = [
     RETENTION_NOT_ENOUGH,
     LTS_NOTIFICATION_STATUS,
     SEND_MAIL_STATUS,
-    SEND_MAIL_EMAIL,
     JOB_HISTORY_GUID,
     JOB_EXIT_CODE,
     JOB_END_TIME,
