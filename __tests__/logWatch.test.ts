@@ -1,5 +1,6 @@
 import { logAPI } from "../src/logAPI";
 import * as fs from "fs";
+import { LogInfo } from "../src/logInfo";
 
 const logPath = "./__tests__/hdmengine_jobs.example-log";
 
@@ -16,7 +17,7 @@ function removeLine(filePath: string, line: string) {
     fs.writeFileSync(filePath, newLines.join("\n"));
 }
 
-describe("LogAPI watch tests", () => {
+describe("LogAPI LogWatch tests", () => {
     test("initWatch not null", () => {
         const logWatch = logAPI.initLogWatch(logPath);
 
@@ -2028,5 +2029,20 @@ describe("LogAPI watch tests", () => {
         });
 
         removeLine(logPath, line);
+    });
+    test("LogWatch getter logInfoList not null", () => {
+        const logWatch = logAPI.initLogWatch(logPath, false);
+
+        expect(logWatch.logInfoList).not.toBeNull();
+
+        logAPI.stopLogWatch(logWatch);
+    });
+    test("LogWatch getter logInfoList push LogInfo", () => {
+        const logWatch = logAPI.initLogWatch(logPath, false);
+
+        expect(logWatch.logInfoList.push(new LogInfo())).toEqual(1);
+        expect(logWatch.logInfoList).toHaveLength(1);
+
+        logAPI.stopLogWatch(logWatch);
     });
 });

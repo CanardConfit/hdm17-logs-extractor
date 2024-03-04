@@ -24,7 +24,7 @@ import {
     JOB_END_TIME,
     SPACER,
     DELIMITER,
-} from "../src/loginfo";
+} from "../src/logInfo";
 
 describe("LogAPI getLog tests", () => {
     test("getLog JOB_START_TIME", () => {
