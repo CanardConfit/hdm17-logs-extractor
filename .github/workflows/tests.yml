@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v4
         with:
           node-version: "latest"
       - uses: borales/actions-yarn@v5
@@ -20,4 +20,4 @@ jobs:
           cmd: install
       - uses: borales/actions-yarn@v5
         with:
-          cmd: test
+          cmd: test -- --coverage
