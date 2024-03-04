@@ -1,5 +1,10 @@
 import { DataType, JOB_NAME, LOG_DATE, LogInfo, LogType, logTypes, OPERATION_TYPE, PROCESS_ID } from "./logInfo";
 
+/**
+ * Extracts base information from a log string.
+ * @param log The log string to extract information from.
+ * @returns An object containing the extracted log date, operation type, process ID, and optionally the job name.
+ */
 function extractBaseInfo(log: string): { logDate: Date; operation: string; processId: number; jobName?: string } {
     const logDate = processData<Date>(LOG_DATE, LOG_DATE.logRegex.exec(log)[1]);
     const operation = processData<string>(OPERATION_TYPE, OPERATION_TYPE.logRegex.exec(log)[1].trim());
@@ -17,6 +22,13 @@ function extractBaseInfo(log: string): { logDate: Date; operation: string; proce
     };
 }
 
+/**
+ * Processes data based on the specified log type.
+ * @param logType The type of the log determining how the data should be processed.
+ * @param data The raw string data to be processed.
+ * @returns The processed data, converted to the appropriate type.
+ * @throws Will throw an error if the data cannot be processed according to the log type.
+ */
 function processData<T>(logType: LogType, data: string): T {
     switch (logType.dataType) {
         case DataType.Date:
@@ -58,10 +70,18 @@ function processData<T>(logType: LogType, data: string): T {
 
 let jobName: string = null;
 
+/**
+ * Resets the current job name to null.
+ */
 const resetJobName = () => {
     jobName = null;
 };
 
+/**
+ * Processes a log string and returns a LogInfo object representing it.
+ * @param log The log string to process.
+ * @returns A LogInfo object containing details extracted from the log string.
+ */
 const getLog = (log: string): LogInfo => {
     for (const logType of logTypes) {
         const match = logType.logRegex.exec(log);

@@ -6,41 +6,71 @@ import { logLib } from "./logLib";
 import { LogInfo } from "./logInfo";
 import { FSWatcher } from "node:fs";
 
+/**
+ * A class for watching log files, emitting events when logs change or errors occur.
+ */
 export class LogWatch extends EventEmitter {
     private _logInfoList: LogInfo[] = [];
     private _readlineInterface: readline.Interface;
     private _fileStream: NodeJS.ReadWriteStream;
     private _watcher: FSWatcher;
 
+    /**
+     * Gets the list of LogInfo objects that have been processed.
+     */
     get logInfoList() {
         return this._logInfoList;
     }
 
+    /**
+     * Gets the readline.Interface instance used for reading the log file line by line.
+     */
     get readlineInterface() {
         return this._readlineInterface;
     }
 
+    /**
+     * Sets the readline.Interface instance used for reading the log file.
+     */
     set readlineInterface(value: readline.Interface) {
         this._readlineInterface = value;
     }
 
+    /**
+     * Gets the file stream used for reading the log file.
+     */
     get fileStream(): NodeJS.ReadWriteStream {
         return this._fileStream;
     }
 
+    /**
+     * Sets the file stream used for reading the log file.
+     */
     set fileStream(value: NodeJS.ReadWriteStream) {
         this._fileStream = value;
     }
 
+    /**
+     * Gets the FSWatcher instance used for watching the log file for changes.
+     */
     get watcher(): FSWatcher {
         return this._watcher;
     }
 
+    /**
+     * Sets the FSWatcher instance used for watching the log file for changes.
+     */
     set watcher(value: FSWatcher) {
         this._watcher = value;
     }
 }
 
+/**
+ * Processes a single line of log, returning a LogInfo object.
+ * @param logWatch The LogWatch instance associated with this log.
+ * @param line The log line to process.
+ * @returns A LogInfo object representing the processed log line.
+ */
 const getLog = (logWatch: LogWatch, line: string): LogInfo => {
     let logInfo: LogInfo;
     try {
@@ -52,6 +82,11 @@ const getLog = (logWatch: LogWatch, line: string): LogInfo => {
     return logInfo;
 };
 
+/**
+ * Starts watching a log file for changes, emitting events when new logs are detected.
+ * @param logPath The path to the log file to watch.
+ * @param logWatch The LogWatch instance to use for watching the file.
+ */
 const watchFile = (logPath: string, logWatch: LogWatch) => {
     console.log("Listen for changes in file...");
     let buffer = "";
@@ -79,12 +114,22 @@ const watchFile = (logPath: string, logWatch: LogWatch) => {
     });
 };
 
+/**
+ * Stops watching the log file and cleans up resources.
+ * @param logWatch The LogWatch instance to stop.
+ */
 const stopLogWatch = (logWatch: LogWatch) => {
     logWatch.readlineInterface.close();
     logWatch.fileStream.end();
     logWatch.watcher.close();
 };
 
+/**
+ * Initializes a LogWatch instance for a given hdm17 log file.
+ * @param logPath The path to the log file to watch.
+ * @param firstScan Whether to perform an initial scan of the file.
+ * @returns A LogWatch instance configured for the specified log file.
+ */
 const initLogWatch = (logPath: string, firstScan: boolean = true): LogWatch => {
     const logWatch = new LogWatch();
 
@@ -126,6 +171,9 @@ const initLogWatch = (logPath: string, firstScan: boolean = true): LogWatch => {
     return logWatch;
 };
 
+/**
+ * A collection of API methods for managing log watching and processing.
+ */
 export const logAPI = {
     initLogWatch,
     stopLogWatch,

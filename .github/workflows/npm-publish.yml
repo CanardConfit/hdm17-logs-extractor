@@ -1,0 +1,45 @@
+name: Build and Publish NPM Project
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+      - name: Check version match
+        run: |
+          TAG_VERSION=${GITHUB_REF/refs\/tags\/v/}
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          if [ "$TAG_VERSION" != "$PACKAGE_VERSION" ]; then
+            echo "Tag version ($TAG_VERSION) does not match package.json version ($PACKAGE_VERSION)"
+            exit 1
+          fi
+      - name: Install dependencies
+        uses: borales/actions-yarn@v5
+        with:
+          cmd: install
+      - name: Build project
+        uses: borales/actions-yarn@v5
+        with:
+          cmd: build
+      - name: Publish to npm
+        uses: borales/actions-yarn@v5
+        with:
+          cmd: publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish to GitHub Packages
+        uses: borales/actions-yarn@v5
+        with:
+          cmd: publish
+          registry-url: 'https://npm.pkg.github.com/'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
