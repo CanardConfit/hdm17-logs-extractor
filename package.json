@@ -4,8 +4,8 @@
   "author": "CanardConfit",
   "description": "Extracts logs from Paragon Hard Disk Manager 17, a software for automated device backups",
   "license": "MPL-2.0",
-  "main": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc",
