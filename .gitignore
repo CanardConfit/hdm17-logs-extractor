@@ -243,3 +243,5 @@ dist
 .sonarlint/
 
 # End of https://www.toptal.com/developers/gitignore/api/node,jetbrains+all,sonarqube
+.idea
+tmp

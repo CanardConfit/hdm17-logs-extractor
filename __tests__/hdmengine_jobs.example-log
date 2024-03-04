@@ -1,0 +1,274 @@
+14.01.2024 11:31:31.648,virtual ,[9068]   ################################################################################
+14.01.2024 11:31:31.650,virtual ,[9068]   JOB_JobHistory_VerifyQuery started, start time: 14.01.2024 11:31:31
+14.01.2024 11:31:31.651,virtual ,[9068]   
+14.01.2024 11:31:31.698,virtual ,[9068]   
+14.01.2024 11:31:31.700,virtual ,[9068]   Total items verified: 0
+14.01.2024 11:31:31.701,virtual ,[9068]   
+14.01.2024 11:31:31.702,virtual ,[9068]   JOB_JobHistory_VerifyQuery result: 0x0 ("Op�ration r�ussie")
+14.01.2024 11:31:31.703,virtual ,[9068]   Finish time: 14.01.2024 11:31:31
+14.01.2024 11:31:31.704,virtual ,[9068]   ################################################################################
+14.01.2024 11:31:31.704,virtual ,[9068]   
+14.01.2024 11:31:31.706,virtual ,[9068]   ################################################################################
+14.01.2024 11:31:31.707,virtual ,[9068]   JOB_Job_VerifyQuery started, start time: 14.01.2024 11:31:31
+14.01.2024 11:31:31.708,virtual ,[9068]   Verify job's Hyper-V machine: Yes
+14.01.2024 11:31:31.708,virtual ,[9068]   
+14.01.2024 11:31:31.709,virtual ,[9068]   
+14.01.2024 11:31:31.710,virtual ,[9068]   Total jobs verified: 0
+14.01.2024 11:31:31.711,virtual ,[9068]   
+14.01.2024 11:31:31.711,virtual ,[9068]   JOB_Job_VerifyQuery result: 0x0 ("Op�ration r�ussie")
+14.01.2024 11:31:31.712,virtual ,[9068]   Finish time: 14.01.2024 11:31:31
+14.01.2024 11:31:31.713,virtual ,[9068]   ################################################################################
+14.01.2024 11:31:31.713,virtual ,[9068]   
+14.01.2024 11:31:31.721,virtual ,[9068]   ################################################################################
+14.01.2024 11:31:31.722,virtual ,[9068]   JOB_Job_DeleteQuery started, start time: 14.01.2024 11:31:31
+14.01.2024 11:31:31.723,virtual ,[9068]   Delete and clear results : No
+14.01.2024 11:31:31.723,virtual ,[9068]   Delete broken jobs only  : Yes
+14.01.2024 11:31:31.724,virtual ,[9068]   
+14.01.2024 11:31:31.725,virtual ,[9068]   
+14.01.2024 11:31:31.725,virtual ,[9068]   Total items deleted: 0
+14.01.2024 11:31:31.740,virtual ,[9068]   
+14.01.2024 11:31:31.741,virtual ,[9068]   JOB_Job_DeleteQuery result: 0x0 ("Op�ration r�ussie")
+14.01.2024 11:31:31.741,virtual ,[9068]   Finish time: 14.01.2024 11:31:31
+14.01.2024 11:31:31.742,virtual ,[9068]   ################################################################################
+14.01.2024 11:31:31.742,virtual ,[9068]   
+14.01.2024 14:30:24.797,virtual ,[9736]   ################################################################################
+14.01.2024 14:30:24.798,virtual ,[9736]   JOB_Job_CreateUpdate started, start time: 14.01.2024 14:30:24
+14.01.2024 14:30:24.799,virtual ,[9736]   Create: Yes
+14.01.2024 14:30:24.800,virtual ,[9736]   Operation                : 'Backup partitions or disks to virtual containers'
+14.01.2024 14:30:24.800,virtual ,[9736]   Import job results       : Yes
+14.01.2024 14:30:24.801,virtual ,[9736]   New job guid             : '3253b930-8951-47de-ff8c-50d500787631'
+14.01.2024 14:30:24.802,virtual ,[9736]   Target path for backup   : 'B:/Job-202308242124755'
+14.01.2024 14:30:24.822,virtual ,[9736]   
+14.01.2024 14:30:24.823,virtual ,[9736]   Create job '3253b930-8951-47de-ff8c-50d500787631' in database 'C:/ProgramData/Paragon Software/Hard Disk Manager 17 Advanced/storage/jdb' ... Success
+14.01.2024 14:30:27.737,virtual ,[9736]   Backup set found               : 'B:/Job-202308242124755/Job-202308242124755_2024-01-13_11-01-58/Job-202308242124755_2024-01-13_11-01-58.pfi'
+14.01.2024 14:30:27.737,virtual ,[9736]   Backup sets count              : 1
+14.01.2024 14:30:27.738,virtual ,[9736]   Last backup set                : 'B:/Job-202308242124755/Job-202308242124755_2024-01-13_11-01-58/Job-202308242124755_2024-01-13_11-01-58.pfi'
+14.01.2024 14:30:27.739,virtual ,[9736]   Backup sets chain type         : Base archive and increments
+14.01.2024 14:30:27.739,virtual ,[9736]   Backup sets max set size       : 2
+14.01.2024 14:30:27.740,virtual ,[9736]   
+14.01.2024 14:30:27.777,virtual ,[9736]   !!!Error: Original location for archive partition 0 of disk 0 not found (1 of 6) ... Failed (Result = 0x11030, "F:\BuildAgent\work\341d64cdea7aa549\hdmengine\hdmsdk\src\stub1\vdarc\vdarcsupp.cpp, line 4480")
+14.01.2024 14:30:27.779,virtual ,[9736]   !!!Error: Original location for archive partition 1 of disk 0 not found (2 of 6) ... Failed (Result = 0x11030, "F:\BuildAgent\work\341d64cdea7aa549\hdmengine\hdmsdk\src\stub1\vdarc\vdarcsupp.cpp, line 4480")
+14.01.2024 14:30:27.779,virtual ,[9736]   !!!Error: Original location for archive partition 0 of disk 1 not found (3 of 6) ... Failed (Result = 0x11030, "F:\BuildAgent\work\341d64cdea7aa549\hdmengine\hdmsdk\src\stub1\vdarc\vdarcsupp.cpp, line 4480")
+14.01.2024 14:30:27.779,virtual ,[9736]   !!!Error: Original location for archive partition 1 of disk 1 not found (4 of 6) ... Failed (Result = 0x11030, "F:\BuildAgent\work\341d64cdea7aa549\hdmengine\hdmsdk\src\stub1\vdarc\vdarcsupp.cpp, line 4480")
+14.01.2024 14:30:27.780,virtual ,[9736]   !!!Error: Original location for archive partition 2 of disk 1 not found (5 of 6) ... Failed (Result = 0x11030, "F:\BuildAgent\work\341d64cdea7aa549\hdmengine\hdmsdk\src\stub1\vdarc\vdarcsupp.cpp, line 4480")
+14.01.2024 14:30:27.781,virtual ,[9736]   !!!Error: Original location for archive partition 3 of disk 1 not found (6 of 6) ... Failed (Result = 0x11030, "F:\BuildAgent\work\341d64cdea7aa549\hdmengine\hdmsdk\src\stub1\vdarc\vdarcsupp.cpp, line 4480")
+14.01.2024 14:30:27.865,virtual ,[9736]   
+14.01.2024 14:30:28.071,virtual ,[9736]   Import archive path 'B:/Job-202308242124755/Job-202308242124755_2024-01-13_11-01-58/Job-202308242124755_2024-01-13_11-01-58.pfi' ... Success
+14.01.2024 14:30:28.072,virtual ,[9736]   Job history guid    : '242deaae-01e6-4acf-e852-69878c014306'
+14.01.2024 14:30:30.536,virtual ,[9736]   Import archive path 'B:/Job-202308242124755/Job-202308242124755_2024-01-13_11-01-58/inc_1_0_1/inc_1.pfi' ... Success
+14.01.2024 14:30:30.537,virtual ,[9736]   Job history guid    : '21ad40ad-5920-4a68-f3d6-18072180770a'
+14.01.2024 14:30:30.537,virtual ,[9736]   
+14.01.2024 14:30:30.538,virtual ,[9736]   JOB_Job_CreateUpdate result: 0x0 ("Op�ration r�ussie")
+14.01.2024 14:30:30.538,virtual ,[9736]   Finish time: 14.01.2024 14:30:30
+14.01.2024 14:30:30.539,virtual ,[9736]   ################################################################################
+14.01.2024 14:30:30.539,virtual ,[9736]   
+14.01.2024 22:11:44.386,virtual ,[6676]   ################################################################################
+14.01.2024 22:11:44.388,virtual ,[6676]   JOB_Job_CreateUpdate started, start time: 14.01.2024 22:11:44
+14.01.2024 22:11:44.389,virtual ,[6676]   Create: No
+14.01.2024 22:11:44.389,virtual ,[6676]   Enable power safe        : Yes
+14.01.2024 22:11:44.390,virtual ,[6676]   Job guid                 : '50389249-b262-3809-56f1-cef4484be936'
+14.01.2024 22:11:44.395,virtual ,[6676]   Target path for backup   : 'B:/Job-202401136204617'
+14.01.2024 22:11:44.436,virtual ,[6676]   
+14.01.2024 22:11:44.436,virtual ,[6676]   Backup job params:
+14.01.2024 22:11:44.437,virtual ,[6676]   Backup set chain type    : Base archive and increments
+14.01.2024 22:11:44.437,virtual ,[6676]   Backup set size          : 4
+14.01.2024 22:11:44.438,virtual ,[6676]   Retention type           : Keep N backups
+14.01.2024 22:11:44.438,virtual ,[6676]   Count of archives to keep: 4
+14.01.2024 22:11:44.446,virtual ,[6676]   
+14.01.2024 22:11:44.447,virtual ,[6676]   Update job '50389249-b262-3809-56f1-cef4484be936' in database 'C:/ProgramData/Paragon Software/Hard Disk Manager 17 Advanced/storage/jdb' ... Success
+14.01.2024 22:11:44.466,virtual ,[6676]   
+14.01.2024 22:11:44.467,virtual ,[6676]   JOB_Job_CreateUpdate result: 0x0 ("Op�ration r�ussie")
+14.01.2024 22:11:44.467,virtual ,[6676]   Finish time: 14.01.2024 22:11:44
+14.01.2024 22:11:44.467,virtual ,[6676]   ################################################################################
+14.01.2024 22:11:44.467,virtual ,[6676]   
+14.01.2024 22:12:31.039,virtual ,[6676]   ################################################################################
+14.01.2024 22:12:31.040,virtual ,[6676]   JOB_JobHistory_VerifyQuery started, start time: 14.01.2024 22:12:31
+14.01.2024 22:12:31.041,virtual ,[6676]   
+14.01.2024 22:12:31.182,virtual ,[6676]   
+14.01.2024 22:12:31.183,virtual ,[6676]   Total items verified: 0
+14.01.2024 22:12:31.184,virtual ,[6676]   
+14.01.2024 22:12:31.184,virtual ,[6676]   JOB_JobHistory_VerifyQuery result: 0x0 ("Op�ration r�ussie")
+14.01.2024 22:12:31.185,virtual ,[6676]   Finish time: 14.01.2024 22:12:31
+14.01.2024 22:12:31.185,virtual ,[6676]   ################################################################################
+14.01.2024 22:12:31.185,virtual ,[6676]   
+14.01.2024 22:12:31.186,virtual ,[6676]   ################################################################################
+14.01.2024 22:12:31.187,virtual ,[6676]   JOB_Job_VerifyQuery started, start time: 14.01.2024 22:12:31
+14.01.2024 22:12:31.187,virtual ,[6676]   Verify job's Hyper-V machine: Yes
+14.01.2024 22:12:31.188,virtual ,[6676]   
+14.01.2024 22:12:31.234,virtual ,[6676]   Target path for backup   : 'B:/Job-202308242124755'
+14.01.2024 22:12:31.278,virtual ,[6676]   
+14.01.2024 22:12:31.279,virtual ,[6676]   Backup job params:
+14.01.2024 22:12:31.279,virtual ,[6676]   Backup set chain type    : Base archive and increments
+14.01.2024 22:12:31.280,virtual ,[6676]   Backup set size          : 2
+14.01.2024 22:12:31.281,virtual ,[6676]   Retention type           : None
+14.01.2024 22:12:31.288,virtual ,[6676]   
+14.01.2024 22:12:31.288,virtual ,[6676]   Update job '3253b930-8951-47de-ff8c-50d500787631' in database 'C:/ProgramData/Paragon Software/Hard Disk Manager 17 Advanced/storage/jdb' ... Success
+14.01.2024 22:12:31.373,virtual ,[6676]   Backup set found               : 'B:/Job-202308242124755/Job-202308242124755_2024-01-13_11-01-58/Job-202308242124755_2024-01-13_11-01-58.pfi'
+14.01.2024 22:12:31.374,virtual ,[6676]   Backup sets count              : 1
+14.01.2024 22:12:31.375,virtual ,[6676]   Last backup set                : 'B:/Job-202308242124755/Job-202308242124755_2024-01-13_11-01-58/Job-202308242124755_2024-01-13_11-01-58.pfi'
+14.01.2024 22:12:31.375,virtual ,[6676]   
+14.01.2024 22:12:31.517,virtual ,[6676]   Target path for backup   : 'B:/Job-202401136204617'
+14.01.2024 22:12:31.558,virtual ,[6676]   
+14.01.2024 22:12:31.559,virtual ,[6676]   Backup job params:
+14.01.2024 22:12:31.560,virtual ,[6676]   Backup set chain type    : Base archive and increments
+14.01.2024 22:12:31.560,virtual ,[6676]   Backup set size          : 4
+14.01.2024 22:12:31.562,virtual ,[6676]   Retention type           : Keep N backups
+14.01.2024 22:12:31.562,virtual ,[6676]   Count of archives to keep: 4
+14.01.2024 22:12:31.569,virtual ,[6676]   
+14.01.2024 22:12:31.569,virtual ,[6676]   Update job '50389249-b262-3809-56f1-cef4484be936' in database 'C:/ProgramData/Paragon Software/Hard Disk Manager 17 Advanced/storage/jdb' ... Success
+14.01.2024 22:12:31.570,virtual ,[6676]   !!!Warning: Enumeration files in directory 'B:/Job-202401136204617' ... Failed (Result = 0x11047, "F:\BuildAgent\work\341d64cdea7aa549\hdmengine\hdmsdk\src\stub1\job\job_supp.cpp, line 4419")
+14.01.2024 22:12:31.571,virtual ,[6676]   !!!Warning: Enumeration files in directory 'B:/Job-202401136204617' ... Failed (Result = 0x11047, "F:\BuildAgent\work\341d64cdea7aa549\hdmengine\hdmsdk\src\stub1\job\job_supp.cpp, line 4419")
+14.01.2024 22:12:31.571,virtual ,[6676]   !!!Warning: Enumeration files in directory 'B:/Job-202401136204617' ... Failed (Result = 0x11047, "F:\BuildAgent\work\341d64cdea7aa549\hdmengine\hdmsdk\src\stub1\job\job_supp.cpp, line 4419")
+14.01.2024 22:12:31.572,virtual ,[6676]   
+14.01.2024 22:12:31.573,virtual ,[6676]   Total jobs verified: 0
+14.01.2024 22:12:31.573,virtual ,[6676]   
+14.01.2024 22:12:31.574,virtual ,[6676]   JOB_Job_VerifyQuery result: 0x0 ("Op�ration r�ussie")
+14.01.2024 22:12:31.575,virtual ,[6676]   Finish time: 14.01.2024 22:12:31
+14.01.2024 22:12:31.575,virtual ,[6676]   ################################################################################
+14.01.2024 22:12:31.575,virtual ,[6676]   
+25.02.2024 13:40:13.018,virtual ,[11184]  ################################################################################
+25.02.2024 13:40:13.019,virtual ,[11184]  JOB_Job_Do started, start time: 25.02.2024 13:40:13
+25.02.2024 13:40:13.019,virtual ,[11184]  Job guid: '50389249-b262-3809-56f1-cef4484be936'
+25.02.2024 13:40:13.021,virtual ,[11184]  Job '50389249-b262-3809-56f1-cef4484be936' is prepared for run by current process
+25.02.2024 13:40:13.093,physical,[11184]  
+25.02.2024 13:40:13.094,physical,[11184]  (Policy) Backup set chain type : Base archive and increments
+25.02.2024 13:40:13.094,physical,[11184]  (Policy) Backup set size       : 4
+25.02.2024 13:40:13.095,physical,[11184]  (Policy) Retention type        : Keep N backups
+25.02.2024 13:40:13.095,physical,[11184]  Count of archives to keep      : 4
+25.02.2024 13:40:13.096,physical,[11184]  
+25.02.2024 13:40:16.413,physical,[11184]  Backup set found               : 'B:/Job-202401136204617/Job-202401136204617_2024-02-05_09-40-10/Job-202401136204617_2024-02-05_09-40-10.pfi'
+25.02.2024 13:40:16.603,physical,[11184]  Backup set found               : 'B:/Job-202401136204617/Job-202401136204617_2024-02-17_12-21-58/Job-202401136204617_2024-02-17_12-21-58.pfi'
+25.02.2024 13:40:16.604,physical,[11184]  Backup sets count              : 2
+25.02.2024 13:40:16.605,physical,[11184]  Last backup set                : 'B:/Job-202401136204617/Job-202401136204617_2024-02-17_12-21-58/Job-202401136204617_2024-02-17_12-21-58.pfi'
+25.02.2024 13:40:16.605,physical,[11184]  Last backup set size           : 3
+25.02.2024 13:40:16.606,physical,[11184]  
+25.02.2024 13:44:45.272,physical,[11184]  
+25.02.2024 13:44:45.273,physical,[11184]  Create new incremental archive ... Success
+25.02.2024 13:44:45.273,physical,[11184]  Archive path: 'B:/Job-202401136204617/Job-202401136204617_2024-02-17_12-21-58/inc_3_2_3/inc_3.pfi'
+25.02.2024 13:44:45.274,physical,[11184]  
+25.02.2024 13:44:45.274,physical,[11184]  (Retention) Scan storage directory for archives     : 'B:/Job-202401136204617'
+25.02.2024 13:44:45.337,physical,[11184]  (Retention) Number of backup sets for retention     : 2
+25.02.2024 13:44:45.338,physical,[11184]  (Retention) Number of archives for retention        : 8
+25.02.2024 13:44:45.338,physical,[11184]  (Retention) Oldest backup set found for retention   : 'B:/Job-202401136204617/Job-202401136204617_2024-02-05_09-40-10'
+25.02.2024 13:44:45.370,physical,[11184]  (Retention) Number of archives in set for retention : 4
+25.02.2024 13:44:45.370,physical,[11184]  (Retention) Number of archives need for retention   : 8
+25.02.2024 13:44:45.387,physical,[11184]  
+25.02.2024 13:44:45.558,physical,[11184]  Setting status of job history '52159428-b462-4309-56f1-cef4484be936' from 'Failed' to 'History' ... Success
+25.02.2024 13:44:45.609,physical,[11184]  Setting status of job history '49382804-e886-4cab-b384-1289077a0c28' from 'Failed' to 'History' ... Success
+25.02.2024 13:44:52.886,physical,[11184]  (Retention) Delete oldest folder 'B:/Job-202401136204617/Job-202401136204617_2024-02-05_09-40-10' ... Success
+25.02.2024 13:44:52.886,physical,[11184]  
+25.02.2024 13:44:52.887,physical,[11184]  (Retention) Scan storage directory for archives     : 'B:/Job-202401136204617'
+25.02.2024 13:44:52.918,physical,[11184]  (Retention) Number of backup sets for retention     : 1
+25.02.2024 13:44:52.919,physical,[11184]  (Retention) Number of archives for retention        : 4
+25.02.2024 13:44:52.920,physical,[11184]  (Retention) Oldest backup set found for retention   : 'B:/Job-202401136204617/Job-202401136204617_2024-02-17_12-21-58'
+25.02.2024 13:44:52.920,physical,[11184]  (Retention) Number of backup sets is not enough (1 < 2) ... Stop
+25.02.2024 13:44:52.921,physical,[11184]  
+25.02.2024 13:44:52.922,physical,[11184]  LSL notification result status: 'Green'
+25.02.2024 13:44:52.923,physical,[11184]  Sending notification for detailed message ...
+25.02.2024 13:44:52.936,physical,[11184]  
+25.02.2024 13:44:52.937,physical,[11184]  Trying to load library 'hdmtools_maillib.dll' ...
+25.02.2024 13:44:58.670,physical,[11184]  Send mail via SMTP server to 'example@example.com' ... Success
+25.02.2024 13:44:58.747,physical,[11184]  
+25.02.2024 13:44:58.747,physical,[11184]  Perform job '50389249-b262-3809-56f1-cef4484be936' ... Done
+25.02.2024 13:44:58.748,physical,[11184]  New job history guid: '1a30dd7e-957b-43d3-146e-7a9eb722700a'
+25.02.2024 13:44:59.868,virtual ,[11184]  
+25.02.2024 13:44:59.869,virtual ,[11184]  JOB_Job_Do result: 0x0 ("Op�ration r�ussie")
+25.02.2024 13:44:59.869,virtual ,[11184]  Finish time: 25.02.2024 13:44:59
+25.02.2024 13:44:59.870,virtual ,[11184]  ################################################################################
+25.02.2024 13:44:59.870,virtual ,[11184]  
+01.03.2024 10:30:38.949,virtual ,[28376]  ################################################################################
+01.03.2024 10:30:39.011,virtual ,[28376]  JOB_Job_PrepareRun started, start time: 01.03.2024 10:30:38
+01.03.2024 10:30:39.057,virtual ,[28376]  Job guid: '50389249-b262-3809-56f1-cef4484be936'
+01.03.2024 10:30:39.262,virtual ,[28376]  
+01.03.2024 10:30:39.263,virtual ,[28376]  JOB_Job_PrepareRun result: 0x0 ("Op�ration r�ussie")
+01.03.2024 10:30:39.264,virtual ,[28376]  Finish time: 01.03.2024 10:30:39
+01.03.2024 10:30:39.265,virtual ,[28376]  ################################################################################
+01.03.2024 10:30:39.265,virtual ,[28376]  
+01.03.2024 10:30:51.988,virtual ,[28376]  ################################################################################
+01.03.2024 10:30:51.989,virtual ,[28376]  JOB_Job_Do started, start time: 01.03.2024 10:30:51
+01.03.2024 10:30:51.990,virtual ,[28376]  Job guid: '50389249-b262-3809-56f1-cef4484be936'
+01.03.2024 10:30:51.992,virtual ,[28376]  Job '50389249-b262-3809-56f1-cef4484be936' is prepared for run by current process
+01.03.2024 10:30:52.060,physical,[28376]  
+01.03.2024 10:30:52.061,physical,[28376]  (Policy) Backup set chain type : Base archive and increments
+01.03.2024 10:30:52.061,physical,[28376]  (Policy) Backup set size       : 4
+01.03.2024 10:30:52.062,physical,[28376]  (Policy) Retention type        : Keep N backups
+01.03.2024 10:30:52.063,physical,[28376]  Count of archives to keep      : 4
+01.03.2024 10:30:52.063,physical,[28376]  
+01.03.2024 10:30:54.098,physical,[28376]  Backup set found               : 'B:/Job-202401136204617/Job-202401136204617_2024-02-17_12-21-58/Job-202401136204617_2024-02-17_12-21-58.pfi'
+01.03.2024 10:30:54.098,physical,[28376]  Backup sets count              : 1
+01.03.2024 10:30:54.099,physical,[28376]  Last backup set                : 'B:/Job-202401136204617/Job-202401136204617_2024-02-17_12-21-58/Job-202401136204617_2024-02-17_12-21-58.pfi'
+01.03.2024 10:30:54.100,physical,[28376]  Last backup set size           : 4
+01.03.2024 10:30:54.100,physical,[28376]  
+01.03.2024 17:22:16.816,physical,[28376]  Create new base archive ... Success
+01.03.2024 17:22:16.817,physical,[28376]  Archive path: 'B:/Job-202401136204617/Job-202401136204617_2024-03-01_10-30-54/Job-202401136204617_2024-03-01_10-30-54.pfi'
+01.03.2024 17:22:16.818,physical,[28376]  
+01.03.2024 17:22:16.819,physical,[28376]  (Retention) Scan storage directory for archives     : 'B:/Job-202401136204617'
+01.03.2024 17:22:21.109,physical,[28376]  (Retention) Number of backup sets for retention     : 2
+01.03.2024 17:22:21.111,physical,[28376]  (Retention) Number of archives for retention        : 5
+01.03.2024 17:22:21.112,physical,[28376]  (Retention) Oldest backup set found for retention   : 'B:/Job-202401136204617/Job-202401136204617_2024-02-17_12-21-58'
+01.03.2024 17:22:21.143,physical,[28376]  (Retention) Number of archives in set for retention : 4
+01.03.2024 17:22:21.144,physical,[28376]  (Retention) Number of archives need for retention   : 8
+01.03.2024 17:22:21.145,physical,[28376]  (Retention) Number of archives is not enough for retention ... Stop
+01.03.2024 17:22:21.154,physical,[28376]  
+01.03.2024 17:22:21.156,physical,[28376]  LSL notification result status: 'Green'
+01.03.2024 17:22:21.159,physical,[28376]  Sending notification for detailed message ...
+01.03.2024 17:22:21.174,physical,[28376]  
+01.03.2024 17:22:21.175,physical,[28376]  Trying to load library 'hdmtools_maillib.dll' ...
+01.03.2024 17:22:26.104,physical,[28376]  Send mail via SMTP server to 'example@example.com' ... Success
+01.03.2024 17:22:26.154,physical,[28376]  
+01.03.2024 17:22:26.155,physical,[28376]  Perform job '50389249-b262-3809-56f1-cef4484be936' ... Done
+01.03.2024 17:22:26.156,physical,[28376]  New job history guid: 'e3a46d3e-8f3a-40a8-742f-0139766f6259'
+01.03.2024 17:22:28.410,virtual ,[28376]  
+01.03.2024 17:22:28.411,virtual ,[28376]  JOB_Job_Do result: 0x0 ("Op�ration r�ussie")
+01.03.2024 17:22:28.411,virtual ,[28376]  Finish time: 01.03.2024 17:22:28
+01.03.2024 17:22:28.412,virtual ,[28376]  ################################################################################
+01.03.2024 17:22:28.412,virtual ,[28376]  
+02.03.2024 11:52:43.994,virtual ,[19208]  ################################################################################
+02.03.2024 11:52:44.023,virtual ,[19208]  JOB_Job_PrepareRun started, start time: 02.03.2024 11:52:43
+02.03.2024 11:52:44.069,virtual ,[19208]  Job guid: '50389249-b262-3809-56f1-cef4484be936'
+02.03.2024 11:52:44.332,virtual ,[19208]  
+02.03.2024 11:52:44.333,virtual ,[19208]  JOB_Job_PrepareRun result: 0x0 ("Op�ration r�ussie")
+02.03.2024 11:52:44.333,virtual ,[19208]  Finish time: 02.03.2024 11:52:44
+02.03.2024 11:52:44.334,virtual ,[19208]  ################################################################################
+02.03.2024 11:52:44.334,virtual ,[19208]  
+02.03.2024 11:52:56.742,virtual ,[19208]  ################################################################################
+02.03.2024 11:52:56.743,virtual ,[19208]  JOB_Job_Do started, start time: 02.03.2024 11:52:56
+02.03.2024 11:52:56.743,virtual ,[19208]  Job guid: '50389249-b262-3809-56f1-cef4484be936'
+02.03.2024 11:52:56.745,virtual ,[19208]  Job '50389249-b262-3809-56f1-cef4484be936' is prepared for run by current process
+02.03.2024 11:52:56.837,physical,[19208]  
+02.03.2024 11:52:56.837,physical,[19208]  (Policy) Backup set chain type : Base archive and increments
+02.03.2024 11:52:56.838,physical,[19208]  (Policy) Backup set size       : 4
+02.03.2024 11:52:56.839,physical,[19208]  (Policy) Retention type        : Keep N backups
+02.03.2024 11:52:56.839,physical,[19208]  Count of archives to keep      : 4
+02.03.2024 11:52:56.840,physical,[19208]  
+02.03.2024 11:53:00.375,physical,[19208]  Backup set found               : 'B:/Job-202401136204617/Job-202401136204617_2024-02-17_12-21-58/Job-202401136204617_2024-02-17_12-21-58.pfi'
+02.03.2024 11:53:00.409,physical,[19208]  Backup set found               : 'B:/Job-202401136204617/Job-202401136204617_2024-03-01_10-30-54/Job-202401136204617_2024-03-01_10-30-54.pfi'
+02.03.2024 11:53:00.410,physical,[19208]  Backup sets count              : 2
+02.03.2024 11:53:00.410,physical,[19208]  Last backup set                : 'B:/Job-202401136204617/Job-202401136204617_2024-03-01_10-30-54/Job-202401136204617_2024-03-01_10-30-54.pfi'
+02.03.2024 11:53:00.411,physical,[19208]  Last backup set size           : 1
+02.03.2024 11:53:00.411,physical,[19208]  
+02.03.2024 11:58:31.166,physical,[19208]  
+02.03.2024 11:58:31.167,physical,[19208]  Create new incremental archive ... Success
+02.03.2024 11:58:31.168,physical,[19208]  Archive path: 'B:/Job-202401136204617/Job-202401136204617_2024-03-01_10-30-54/inc_1_0_1/inc_1.pfi'
+02.03.2024 11:58:31.169,physical,[19208]  
+02.03.2024 11:58:31.169,physical,[19208]  (Retention) Scan storage directory for archives     : 'B:/Job-202401136204617'
+02.03.2024 11:58:31.232,physical,[19208]  (Retention) Number of backup sets for retention     : 2
+02.03.2024 11:58:31.232,physical,[19208]  (Retention) Number of archives for retention        : 6
+02.03.2024 11:58:31.233,physical,[19208]  (Retention) Oldest backup set found for retention   : 'B:/Job-202401136204617/Job-202401136204617_2024-02-17_12-21-58'
+02.03.2024 11:58:31.264,physical,[19208]  (Retention) Number of archives in set for retention : 4
+02.03.2024 11:58:31.266,physical,[19208]  (Retention) Number of archives need for retention   : 8
+02.03.2024 11:58:31.266,physical,[19208]  (Retention) Number of archives is not enough for retention ... Stop
+02.03.2024 11:58:31.267,physical,[19208]  
+02.03.2024 11:58:31.268,physical,[19208]  LSL notification result status: 'Green'
+02.03.2024 11:58:31.269,physical,[19208]  Sending notification for detailed message ...
+02.03.2024 11:58:31.284,physical,[19208]  
+02.03.2024 11:58:31.284,physical,[19208]  Trying to load library 'hdmtools_maillib.dll' ...
+02.03.2024 11:58:34.717,physical,[19208]  Send mail via SMTP server to 'example@example.com' ... Success
+02.03.2024 11:58:34.781,physical,[19208]  
+02.03.2024 11:58:34.782,physical,[19208]  Perform job '50389249-b262-3809-56f1-cef4484be936' ... Done
+02.03.2024 11:58:34.782,physical,[19208]  New job history guid: 'eb32b85e-fc7c-4f6b-5631-8532d7354867'
+02.03.2024 11:58:35.857,virtual ,[19208]  
+02.03.2024 11:58:35.858,virtual ,[19208]  JOB_Job_Do result: 0x0 ("Op�ration r�ussie")
+02.03.2024 11:58:35.858,virtual ,[19208]  Finish time: 02.03.2024 11:58:35
+02.03.2024 11:58:35.859,virtual ,[19208]  ################################################################################
+02.03.2024 11:58:35.859,virtual ,[19208]  
