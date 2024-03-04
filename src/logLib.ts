@@ -88,4 +88,5 @@ const getLog = (log: string): LogInfo => {
 export const logLib = {
     getLog,
     resetJobName,
+    processData,
 };
