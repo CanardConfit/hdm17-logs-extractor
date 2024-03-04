@@ -20,4 +20,4 @@ jobs:
           cmd: install
       - uses: borales/actions-yarn@v5
         with:
-          cmd: test -- --coverage
+          cmd: test
