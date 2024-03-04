@@ -1,3 +1,3 @@
-import { logAPI } from "./logAPI";
+import { logAPI } from "@/logAPI";
 
 export default logAPI;

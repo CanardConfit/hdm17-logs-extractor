@@ -1,4 +1,4 @@
-import { logAPI } from "../src/logAPI";
+import { logAPI } from "@/logAPI";
 import {
     JOB_START_TIME,
     JOB_GUID,
@@ -24,7 +24,7 @@ import {
     JOB_END_TIME,
     SPACER,
     DELIMITER,
-} from "../src/logInfo";
+} from "@/logInfo";
 
 describe("LogAPI getLog tests", () => {
     test("getLog JOB_START_TIME", () => {
