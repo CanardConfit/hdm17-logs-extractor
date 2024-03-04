@@ -2,8 +2,8 @@ import * as fs from "fs";
 import * as iconv from "iconv-lite";
 import * as readline from "readline";
 import { EventEmitter } from "node:events";
-import { logLib } from "@/logLib";
-import { LogInfo } from "@/logInfo";
+import { logLib } from "./logLib";
+import { LogInfo } from "./loginfo";
 import { FSWatcher } from "node:fs";
 
 export class LogWatch extends EventEmitter {

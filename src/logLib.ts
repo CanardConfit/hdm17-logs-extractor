@@ -1,4 +1,4 @@
-import { DataType, JOB_NAME, LOG_DATE, LogInfo, LogType, logTypes, OPERATION_TYPE, PROCESS_ID } from "@/logInfo";
+import { DataType, JOB_NAME, LOG_DATE, LogInfo, LogType, logTypes, OPERATION_TYPE, PROCESS_ID } from "./loginfo";
 
 function extractBaseInfo(log: string): { logDate: Date; operation: string; processId: number; jobName?: string } {
     const logDate = processData<Date>(LOG_DATE, LOG_DATE.logRegex.exec(log)[1]);

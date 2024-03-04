@@ -1,4 +1,4 @@
-import { logAPI } from "@/logAPI";
+import { logAPI } from "../src/logAPI";
 import * as fs from "fs";
 
 const logPath = "./__tests__/hdmengine_jobs.example-log";

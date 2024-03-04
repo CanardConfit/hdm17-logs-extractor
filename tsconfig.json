@@ -8,9 +8,7 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "outDir": "dist",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "baseUrl": "./"
   },
   "lib": ["esnext"],
   "exclude": [
