@@ -6,6 +6,13 @@
   "license": "MPL-2.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CanardConfit/hdm17-logs-extractor.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "scripts": {
     "test": "jest",
     "build": "tsc",
